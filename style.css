@@ -12,4 +12,37 @@ H1{
     font-size:100px;
     text-align: center;
 }
-  
+  body {
+
+    background-image: url(bg.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+  }
+
+  .Car top-down.png { 
+
+    width: 50px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    animation: carAnim 7s infinite;
+
+  }
+
+  .bird img{
+
+    width: 100%;
+
+  }
+
+  @keyframes birdAnim{
+
+    0%{
+
+        left: 50%;
+        top: 70%;
+    }
+
+  }
