@@ -12,37 +12,47 @@ H1{
     font-size:100px;
     text-align: center;
 }
-  body {
 
-    background-image: url(bg.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+*, *::after, *::before {
 
-  }
+  box-sizing: border-box;
+}
 
-  .Car top-down.png { 
+:root {
+  --cell-size: 100px
+  --mark-size: cal(var(--cell-size) * .9);
+}
 
-    width: 50px;
-    position: absolute;
-    left: 20%;
-    top: 10%;
-    animation: carAnim 7s infinite;
+body {
 
-  }
+  margin: 0;
 
-  .bird img{
+}
 
-    width: 100%;
+.board {
 
-  }
+width: 1000px;
+height: 1000px;
+display: grid;
+justify-content: center;
+align-content: center;
+justify-items: center;
+align-items: center;
+grid-template-columns: repeat(3, auto);
 
-  @keyframes birdAnim{
+}
 
-    0%{
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid rgb(124, 104, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
 
-        left: 50%;
-        top: 70%;
-    }
-
-  }
+.box{
+  width: 1000px;
+}
